@@ -1,9 +1,13 @@
 package router
 
-import (
-    "backend/internal/user"
-)
+import "backend/internal/user"
 
 type API struct {
-    UserHandler   *user.Handler
+	UserHandler *user.Handler
+}
+
+func NewAPI(userHandler *user.Handler) *API {
+	return &API{
+		UserHandler: userHandler,
+	}
 }
